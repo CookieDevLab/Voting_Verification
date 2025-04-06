@@ -25,17 +25,16 @@
 
 ## 📁 Project Structure
 
-Voting_Verification/ 
-├── static/ 
-│ └── style.css 
-├── templates/ 
-  ├── index.html 
-  └── result.html 
-├── uploads/ # stores uploaded Aadhaar image 
-├── app.py # Flask server 
-├── requirements.txt 
+Voting_Verification/  
+├── static/  
+│   └── style.css  
+├── templates/  
+│   ├── index.html  
+│   └── result.html  
+├── uploads/             # Stores uploaded Aadhaar images  
+├── app.py               # Flask server  
+├── requirements.txt     # Python dependencies  
 └── README.md
-
 
 ---
 
