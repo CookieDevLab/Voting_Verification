@@ -1,93 +1,86 @@
-Voting Verification – Face and ID-Based Voter Authentication
+Voting Verification – MVP
+A Minimum Viable Product (MVP) for secure and reliable face verification in voting systems using Aadhaar card image and live webcam input.
 
-Overview
-A lightweight face & ID document-based verification system to enhance security and prevent voter impersonation during digital or on-ground elections.
+✅ Features Implemented
+Upload Aadhaar Card image (JPEG/PNG).
 
-Problem Statement
-Many voting systems lack robust real-world identity verification, leading to vulnerabilities like voter impersonation and fraud. This project aims to solve this using AI-powered verification methods.
+Capture real-time webcam photo of the user.
 
-Solution
-We built an MVP that:
+Verify face using DeepFace (live photo vs Aadhaar photo).
 
-Accepts a user’s live image and ID card image.
+Show result as Matched / Mismatched.
 
-Uses face matching and OCR to verify identity.
+🛠️ Technologies Used
+Frontend: HTML, CSS
 
-Displays a success or failure result based on similarity.
+Backend: Python (Flask)
 
-Key Features
+Face Recognition: DeepFace
 
-Upload live photo and ID card image
+Image Handling: OpenCV, Pillow
 
-Face comparison using DeepFace (or OpenCV variant)
+Others: requests, tqdm
 
-OCR text extraction from ID using Tesseract
+🗂️ Project Structure
+Voting_Verification/
+├── static/ → style.css
+├── templates/ → index.html, result.html
+├── uploads/ → stores uploaded Aadhaar image
+├── app.py → Flask server
+├── requirements.txt
+└── README.md
 
-Result-based authentication
+🚀 How to Run Locally
+Clone the repository:
 
-Simple Flask backend for fast prototyping
+bash
+Copy
+Edit
+git clone https://github.com/CookieDevLab/Voting_Verification.git
+cd Voting_Verification
+(Optional) Create a virtual environment:
 
-Runs locally via browser
+bash
+Copy
+Edit
+python -m venv venv
+source venv/bin/activate  # or .\venv\Scripts\activate (Windows)
+Install dependencies:
 
-Tech Stack
-Frontend:
+nginx
+Copy
+Edit
+pip install -r requirements.txt
+Run the app:
 
-HTML, CSS
+nginx
+Copy
+Edit
+python app.py
+Open your browser:
 
-Bootstrap
+arduino
+Copy
+Edit
+http://localhost:5000
+⚠️ Known Limitations
+No user authentication (MVP only).
 
-Backend:
+Requires proper face visibility in both images.
 
-Python (Flask)
+No OCR or Aadhaar detail extraction yet.
 
-DeepFace or OpenCV for face recognition
+🧠 What’s Next
+Integrate OCR to read Aadhaar details.
 
-Tesseract OCR for ID text extraction
+Add secure authentication (e.g., OTP).
 
-Tools & Deployment:
+Deploy on cloud platform (Render/Replit).
 
-GitHub (version control)
+Use Gemini API for smarter verification.
 
-Localhost testing
+Save verified results into database.
 
-[Optional] IDX + Gemini API (integration planned for next phase)
+📦 MVP Deployment Link
+Add your hosted MVP link here (e.g., Render or Replit URL)
 
-How to Run (Local Setup)
-
-Clone the repo: git clone https://github.com/CookieDevLab/Voting_Verification.git
-
-Navigate to the folder: cd Voting_Verification
-
-Install dependencies: pip install -r requirements.txt
-
-Run the app: python app.py
-
-Open your browser at: http://localhost:5000
-
-Demo Screenshots
-(Save your image in /screenshots and use links like below)
-
-
-
-Demo Video
-📽️ Watch Demo: 
-
-What’s Pending or Planned
-
-Mobile responsiveness (React UI planned)
-
-Gemini API integration (smart verification)
-
-Cloud hosting on Google Cloud / Firebase
-
-AES encryption for voter data transmission
-
-Admin panel for verifying election logs
-
-Team
-
-Vishwa R – Developer
-Athmapriyan K - Developer
-Sanjay Murali - Developer, Designer
-Joel Sheno G - Designer, Documentation
-College: SRM University of Science and Technology
